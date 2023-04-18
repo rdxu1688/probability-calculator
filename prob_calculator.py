@@ -3,8 +3,8 @@ import random
 # Consider using the modules imported above.
 
 class Hat:
-    
-    def __init__(self, **kwargs): #kwargs to get dictionary of inputs
+     #kwargs to get dictionary of inputs
+    def __init__(self, **kwargs):
         # print(kwargs)
         self.contents = []
         # appends key value number of times 
@@ -14,6 +14,7 @@ class Hat:
             print(self.contents)
     
     def draw(self, number):
+        """Returns the drawn "number" of items"""
         if(number > len(self.contents)):
             return self.contents
         
@@ -26,6 +27,7 @@ class Hat:
 
 
 def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
+    """Returns the experimental probability based in parameters"""
     success = 0
     for i in range(num_experiments):
         # deepcopy parameters for each experiment
